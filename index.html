@@ -38,7 +38,6 @@
             padding: 6px;
             font-weight: bold;
             transition: color 0.3s;
-            cursor: pointer;
         }
 
         .navMenu a:hover {
@@ -50,27 +49,32 @@
 <body>
 
     <nav class="navMenu">
-        <a onclick="scrollToSection('home')" href="#"><i class="fa-solid fa-house"></i> Home</a>
-        <a onclick="scrollToSection('features')" href="#"><i class="fa-solid fa-star"></i> Features</a>
-        <a onclick="scrollToSection('inclusions')" href="#"><i class="fa-solid fa-clipboard-check"></i> Inclusions</a>
-        <a onclick="scrollToSection('resources')" href="#"><i class="fa-solid fa-tools"></i> Resources</a>
-        <a onclick="scrollToSection('options')" href="#"><i class="fa-solid fa-cogs"></i> Options & Features</a>
+        <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#features"><i class="fa-solid fa-star"></i> Features</a>
+        <a href="#inclusions"><i class="fa-solid fa-clipboard-check"></i> Inclusions</a>
+        <a href="#resources"><i class="fa-solid fa-tools"></i> Resources</a>
+        <a href="#options"><i class="fa-solid fa-cogs"></i> Options & Features</a>
     </nav>
 
-    <div id="home" style="height: 1000px; background-color: #f0f0f0; margin-bottom: 20px;">Home Section</div>
-    <div id="features" style="height: 1000px; background-color: #e0e0e0; margin-bottom: 20px;">Features Section</div>
-    <div id="inclusions" style="height: 1000px; background-color: #d0d0d0; margin-bottom: 20px;">Inclusions Section</div>
-    <div id="resources" style="height: 1000px; background-color: #c0c0c0; margin-bottom: 20px;">Resources Section</div>
-    <div id="options" style="height: 1000px; background-color: #b0b0b0; margin-bottom: 20px;">Options & Features Section</div>
+    <div id="home" style="height: 1000px; background-color: lightblue; margin-bottom: 20px;">
+        Home Section
+    </div>
 
-    <script>
-        function scrollToSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        }
-    </script>
+    <div id="features" style="height: 1000px; background-color: lightgreen; margin-bottom: 20px;">
+        Features Section
+    </div>
+
+    <div id="inclusions" style="height: 1000px; background-color: lightyellow; margin-bottom: 20px;">
+        Inclusions Section
+    </div>
+
+    <div id="resources" style="height: 1000px; background-color: lightcoral; margin-bottom: 20px;">
+        Resources Section
+    </div>
+
+    <div id="options" style="height: 1000px; background-color: lightpink; margin-bottom: 20px;">
+        Options & Features Section
+    </div>
 
 </body>
 
