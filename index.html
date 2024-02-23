@@ -31,7 +31,6 @@
 		}
 
 		.navMenu a {
-			color: #ffffff; /* white font color */
 			text-decoration: none;
 			text-transform: uppercase;
 			display: inline-block;
@@ -39,7 +38,7 @@
 		}
 
 		.background {
-			background-color: #ece5f0;
+			background-color: #ece5f0; /* Default background color */
 		}
 
 		.border {
@@ -53,7 +52,7 @@
 	</style>
 </head>
 
-<body>
+<body class="background">
 
 	<nav class="navMenu  border">
 		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
@@ -65,15 +64,8 @@
 
 
 	<script>
-
-		let direction = "horizontal";
-		if (direction === "vertical") {
-			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
-		}
-
-
+		// Function to navigate to different links
 		function navigate(id) {
-
 			if (id == 'home')
 				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#760eba10aafb43329b35135e691ae801", '_blank').focus();
 			else if (id == "features")
@@ -84,8 +76,28 @@
 				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#c9f17b4ab92240f3af8a3a527fbfb1c2", '_blank').focus();
 			else if (id == "options")
 				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#89be1d9f1eed4fee89cd3c996c8b584c", '_blank').focus();
-
 		}
+
+		// Check the background color and adjust text color accordingly
+		document.addEventListener("DOMContentLoaded", function() {
+			var backgroundColor = getComputedStyle(document.body).getPropertyValue('background-color');
+			var navMenuLinks = document.querySelectorAll('.navMenu a');
+
+			navMenuLinks.forEach(function(link) {
+				var textColor = (isDark(backgroundColor)) ? '#ffffff' : '#000000';
+				link.style.color = textColor;
+			});
+
+			function isDark(color) {
+				var match = /rgb\((\d+).*?(\d+).*?(\d+)\)/.exec(color);
+				if (!match) return null;
+				var r = parseInt(match[1]);
+				var g = parseInt(match[2]);
+				var b = parseInt(match[3]);
+				var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+				return brightness < 128;
+			}
+		});
 	</script>
 
 
