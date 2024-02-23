@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
@@ -14,24 +15,20 @@
         * {
             margin: 0;
             padding: 0;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Work Sans', sans-serif;
-        }
-
         .navMenu {
+            font-family: 'Work Sans', sans-serif;
             padding: 8px;
             text-align: center;
             margin: 7px auto;
             width: fit-content;
-            background-color: #ece5f0;
-            border: 1px solid #cccccc;
         }
 
         .navMenu a {
-            color: #555555;
+            color: #555;
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;
@@ -42,6 +39,13 @@
 
         .navMenu a:hover {
             color: #d09c0b;
+        }
+
+        /* Styling for the sections */
+        .section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -56,24 +60,31 @@
         <a href="#options"><i class="fa-solid fa-cogs"></i> Options & Features</a>
     </nav>
 
-    <div id="home" style="height: 1000px; background-color: lightblue; margin-bottom: 20px;">
-        Home Section
+    <!-- Sections -->
+    <div id="Vulcana Indoor Bath:
+Thermo-aspen, DIY, Indoor Sauna Kit, Up to 4-Persons" class="section">
+        <h2>Home Section</h2>
+        <p>This is the content of the Home section.</p>
     </div>
 
-    <div id="features" style="height: 1000px; background-color: lightgreen; margin-bottom: 20px;">
-        Features Section
+    <div id="features" class="section">
+        <h2>Features Section</h2>
+        <p>This is the content of the Features section.</p>
     </div>
 
-    <div id="inclusions" style="height: 1000px; background-color: lightyellow; margin-bottom: 20px;">
-        Inclusions Section
+    <div id="inclusions" class="section">
+        <h2>Inclusions Section</h2>
+        <p>This is the content of the Inclusions section.</p>
     </div>
 
-    <div id="resources" style="height: 1000px; background-color: lightcoral; margin-bottom: 20px;">
-        Resources Section
+    <div id="resources" class="section">
+        <h2>Resources Section</h2>
+        <p>This is the content of the Resources section.</p>
     </div>
 
-    <div id="options" style="height: 1000px; background-color: lightpink; margin-bottom: 20px;">
-        Options & Features Section
+    <div id="options" class="section">
+        <h2>Options & Features Section</h2>
+        <p>This is the content of the Options & Features section.</p>
     </div>
 
 </body>
