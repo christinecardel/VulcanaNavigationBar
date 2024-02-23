@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Work Sans', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="features" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-star"></i> Features</a>
+		<a id="inclusions" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-clipboard-check"></i> Inclusions</a>
+		<a id="resources" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-tools"></i> Resources</a>
+		<a id="options" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cogs"></i> Options & Features</a>
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#760eba10aafb43329b35135e691ae801", '_blank').focus();
+			else if (id == "features")
+				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#1ade1a7a5e1542e6bd251039b0653266", '_blank').focus();
+			else if (id == "inclusions")
+				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#5ecbabe428b0451ca32f0d71a41e1991", '_blank').focus();
+			else if (id == "resources")
+				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#c9f17b4ab92240f3af8a3a527fbfb1c2", '_blank').focus();
+			else if (id == "options")
+				window.open("https://www.notion.so/Auroom-Vulcana-Indoor-Bath-ec690b1dce994030b6743a2fa77ed49a?pvs=4#89be1d9f1eed4fee89cd3c996c8b584c", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
